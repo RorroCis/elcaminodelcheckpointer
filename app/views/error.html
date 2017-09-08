@@ -1,0 +1,22 @@
+<div class="col-sm-12 col-md-12 text-center" ng-controller="ErrorController as errorCtrl">
+  <a ui-sref="topscores" class="col-xs-12 col-sm-2 col-md-2 pixel-text text-left get-back">{{errorCtrl.back}}</a>
+  <div class="col-mxs-12 col-sm-8 col-md-8">
+    <h1>-&nbsp;&nbsp;&nbsp;404 - No ta&nbsp;&nbsp;&nbsp;-</h1>
+  </div>
+  <div class="col-md-offset-2 col-md-8 text-center text-uppercase">
+      <h2 class="">Pero ya que estamos, te podes divertir con esto</h2>
+      <div>
+        <span>Elegi que queres jugar!</span><br>
+        <select id="roms"  ng-model="errorCtrl.romSelected" ng-options="rom.text for rom in errorCtrl.roms"></select>
+      </div>
+      <canvas id="nesnes" width="256" height="224" class="paused">
+          Tu Browser no soporta NESNES!
+      </canvas>
+      <div class="controles">
+        <h2>Controles:</h2>
+        <span>
+          Flechas = d-pad, Shift = select, Enter = start, z = A, x = B 
+        </span>
+      </div>
+  </div>
+</div>

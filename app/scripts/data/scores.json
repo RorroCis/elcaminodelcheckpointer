@@ -1,0 +1,195 @@
+{
+  "results": [
+    {
+      "month": "Septiembre",
+      "monthNumber": 9,
+      "players":[]
+    },
+    {
+      "month": "Agosto",
+      "monthNumber": 8,
+      "players":[
+        {
+          "name": "Juani Molina",
+          "points": 400,
+          "stage": "8-19",
+          "stageLink": "https://www.twitch.tv/videos/167565113",
+          "position": "first",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Guille",
+              "difficulty": 2,
+              "question": "Como se titulo la expansion del primer Diablo publicada por Sierra?",
+              "answer": "-------",
+              "correct": "Hellfire"
+            },
+            {
+              "number": 2,
+              "checkpointer": "Seba",
+              "difficulty": 3,
+              "question": "Dante, el personaje de pelo blanco que protagoniza la trilogia de Devil May Cry de PS2 utiliza dos pistolas de manera frenetica para destrozar a los demonios enemigos. Como se llaman las pistolas?",
+              "answer": "Ebony and Ivory",
+              "points": 300
+            },
+            {
+              "number": 3,
+              "checkpointer": "Dieguito",
+              "difficulty": 1,
+              "question": "En el Prince of Persia original, cuanto tiempo tiene el protagonista para rescatar a la mina?",
+              "answer": "60 minutos",
+              "points": 100
+            },
+            {
+              "number": "Desempate",
+              "checkpointer": "Fede",
+              "difficulty": 1,
+              "question": "Como se llama la protagonista de la saga Perfect Dark?",
+              "answer": "Joanna Dark"
+            }
+          ]
+        },
+        {
+          "name": "Damian Sanchez",
+          "points": 400,
+          "stage": "8-19",
+          "stageLink": "https://www.twitch.tv/videos/167565113",
+          "position": "second",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Seba",
+              "difficulty": 2,
+              "question": "Como se llama el juego que dio origen a la saga Souls y para que plataforma fue lanzado?",
+              "answer": "Demon's Souls, PS3",
+              "points": 200
+            },
+            {
+              "number": 2,
+              "checkpointer": "Sam",
+              "difficulty": 2,
+              "question": "Vincent el protagonista de Catherine, va siempre a un bar, con cuantos amigos suele compartir la mesa?",
+              "answer": "Tres",
+              "points": 200
+            },
+            {
+              "number": 3,
+              "checkpointer": "Diegote",
+              "difficulty": 2,
+              "question": "Cual es la raza de Tali'zorah en la trilogia original de Mass Effect?",
+              "answer": "Tali",
+              "correct": "Quariana"
+            },
+            {
+              "number": "Desempate",
+              "checkpointer": "Seba",
+              "difficulty": 3,
+              "question": "Donkey Kong Country, fue un mega exito de SNES, tanto Donkey Kong como Dee Dee Kong utilizaban varios animales como transporte en los distintos niveles. Nombrar dos animales que se utilizaban como transportes.",
+              "help": "Hay uno en el agua.",
+              "answer": "Jabali y Delfin",
+              "correct": "Avestruz, Rinoceronte, Pez Espada y Rana"
+            }
+          ]
+        },
+        {
+          "name": "Marcos Poca",
+          "points": 300,
+          "stage": "8-18",
+          "stageLink": "https://www.twitch.tv/videos/164049704",
+          "position": "third",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Facu",
+              "difficulty": 2,
+              "question": "En cual de los FF numerados aparecen invocaciones que no son las convencionales?",
+              "answer": "VI",
+              "correct": "XXII"
+            },
+            {
+              "number": 2,
+              "checkpointer": "Seba",
+              "difficulty": 2,
+              "question": "En que juego suena este tema?",
+              "answer": "Metal Gear II",
+              "points": 200
+            },
+            {
+              "number": 3,
+              "checkpointer": "Fede",
+              "difficulty": 1,
+              "question": "A que saga pertenece este sonido?",
+              "answer": "Metroid",
+              "points": 100
+            }
+          ]
+        },
+        {
+          "name": "Chuchu",
+          "points": 200,
+          "stage": "8-18",
+          "stageLink": "https://www.twitch.tv/videos/164049704",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Dieguito",
+              "difficulty": 2,
+              "question": "De que juego es este tema?",
+              "answer": "Hot Line Miami",
+              "correct": "Chrono Trigger"
+            },
+            {
+              "number": 2,
+              "checkpointer": "Guille",
+              "difficulty": 2,
+              "question": "Como se llama el protagonista de la saga Ninja Gaiden?",
+              "help": "El nombre es parecido a un personaje de Street Fighter",
+              "answer": "-------",
+              "correct": "Ryu Hayabusa"
+            },
+            {
+              "number": 3,
+              "checkpointer": "Fede",
+              "difficulty": 2,
+              "question": "Por que nombre es conocido Megaman en Japon?",
+              "answer": "Rockman",
+              "points": 200
+            }
+          ]
+        },
+        {
+          "name": "Joaquin Buen<a href=\"https://www.facebook.com/Sweetlemondelicias/\" class=\"ee\" target=\"_blank\">a</a>",
+          "points": 100,
+          "stage": "8-18",
+          "stageLink": "https://www.twitch.tv/videos/164049704",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Sam",
+              "difficulty": 1,
+              "question": "En el primer Tenchu, manejamos dos personajes. Cuales son?",
+              "answer": "-------",
+              "correct": "Ayame y Rikimaru"
+            },
+            {
+              "number": 2,
+              "checkpointer": "Guille",
+              "difficulty": 1,
+              "question": "Que juego nos deleita con este tema en su primer nivel?",
+              "answer": "Super Mario Bros. 3",
+              "points": 100
+            },
+            {
+              "number": 3,
+              "checkpointer": "Guille",
+              "difficulty": 2,
+              "question": "En cual de los Tomb Rider, clasicos, Lara no porta su caracteristica trenza en el pelo?",
+              "answer": "Underworld",
+              "correct": "Tomb Rider 1"
+            }
+          ]
+        }
+      ]
+    }    
+  ]
+}

@@ -1,0 +1,78 @@
+<div class="col-sm-12 col-md-12 text-center text-uppercase" ng-controller="TopScoresController as topScoresCtrl">
+  <div class="loader" ng-if="!topScoresCtrl.results">
+    <h1 class="pixel-text">Now Loading...</h1>
+  </div>
+  <div ng-if="topScoresCtrl.results">
+    <h1>-&nbsp;&nbsp;&nbsp;EL CAMINO DEL CHECKPOINTER&nbsp;&nbsp;&nbsp;-</h1>
+    <!-- ES UN CAMPEONATO MUY DIFICIL PORQUE VA MUY RAPIDO!  --> 
+    
+    <div class=" col-sm-offset-1 col-md-offset-1 col-xs-12 col-sm-10 col-md-10 row">
+      <hr>
+      <span ng-repeat="month in topScoresCtrl.results | orderBy:'-monthNumber'">
+        <a class="months ee clickable" ng-click="topScoresCtrl.currentMonth=month.monthNumber">{{month.month}}</a>
+        <span ng-if="!$last" class="pixel-text">|</span>
+      </span>
+      <hr>
+    </div>
+    
+    <div class="col-sm-offset-1 col-md-offset-1 col-xs-12 col-sm-10 col-md-10 row" 
+           ng-repeat="month in topScoresCtrl.results | orderBy:'-monthNumber'" >
+      
+      <div ng-if="topScoresCtrl.currentMonth == month.monthNumber" class="score-table">
+
+        <h2>-&nbsp;&nbsp;HIGH SCORES {{month.month}}&nbsp;&nbsp;-</h2>
+
+        <table class="table borderless narrow-padding">
+          <tr class="header">
+            <td class="col-xs-2 col-sm-3 col-md-3">Rank</td>
+            <td class="col-xs-3 col-sm-3 col-md-3">Score</td>
+            <td class="col-xs-3 col-sm-2 col-md-2">Stage</td>
+            <td class="col-xs-4 col-sm-4 col-md-4">Player</td>
+          </tr>
+          <tr class="score player-{{$index+1}}" ng-repeat="player in month.players | players | orderBy:'-points'">
+            <td class="col-xs-2 col-sm-2 col-md-2">No.{{$index+1}}</td>
+            <td class="col-xs-3 col-sm-3 col-md-3"><a ng-click="topScoresCtrl.showModals(month.month+'-'+($index+1))" class="ee" ng-class="{'clickable': player.questions}">{{player.points | points}}</a></td>
+            <td class="col-xs-3 col-sm-2 col-md-2"><a href="{{player.stageLink}}" target="_blank" class="clickable ee">{{player.stage}}</a></td>
+            <td class="col-xs-4 col-sm-5 col-md-5">
+              <img src="./img/medal-gold.png" class="medal" title="Ganador del mes!" ng-if="player.position=='first'">
+              <img src="./img/medal-silver.png" class="medal" title="Palo y afuera" ng-if="player.position=='second'">
+              <img src="./img/medal-bronce.png" class="medal" title="Bien igual!" ng-if="player.position=='third'">          
+              <span ng-bind-html='player.name'></span>
+            </td>
+          </tr>
+        </table>
+
+        <div id="modal-{{month.month}}-{{$index+1}}" class="modal fade text-justify" tabindex="-1" role="dialog" ng-repeat="player in month.players | orderBy:'-points'" ng-if="player.questions"> 
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Preguntas</h4>
+              </div>
+              <div class="modal-body pixel-text">
+                <div ng-repeat="question in player.questions">
+                  <span class="checkpointer">{{question.number}}. {{question.checkpointer}} ({{question.difficulty | difficulty}}):</span><br>
+                  <span class="question">Pregunta:</span> {{question.question}}<br>
+                  <span ng-if="question.help"><span class="help">Ayuda:</span> {{question.help}}<br></span>
+                  <span class="answer">Respuesta:</span> {{question.answer}}<br>
+                  <span ng-if="question.correct"><span class="correct">Correcta:</span> {{question.correct}}<br></span>
+                  <span ng-if="question.points"><span class="points">Puntos:</span> {{question.points}}<br></span>
+                  <br ng-if="!$last">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+      </div><!-- ng-if -->
+
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 start row text-center">
+      <h2><a class="pixel-text " ui-sref="about">{{topScoresCtrl.start}}</a></h2>
+    </div>
+  </div>
+</div>

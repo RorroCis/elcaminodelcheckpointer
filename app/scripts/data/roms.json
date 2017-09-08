@@ -1,0 +1,14 @@
+{
+	"roms":[
+		{"value":"battletoads", "text":"Battletoads"},
+		{"value":"circus", "text":"Charly Circus"},
+		{"value":"donkey-kong-classics", "text":"Donkey Kong"},
+		{"value":"ducktales", "text":"Ducktales"},
+		{"value":"excitebike", "text":"Excitebike"},
+		{"value":"megaman2", "text":"Megaman 2"},
+		{"value":"punchout", "text":"Pounch-Out!"},
+		{"value":"smb", "text":"Super Mario Bros."},
+		{"value":"smb3", "text":"Super Mario Bros. 3"},
+		{"value":"tmnt2", "text":"TMNT 2"}
+	]
+}
