@@ -9,6 +9,7 @@ chkHighScoresApp.controller("TopScoresController", function ($scope, $state, $ro
 			topScoresCtrl.results = data.results;
 			topScoresCtrl.currentMonth = data.results[0].monthNumber;
 		});
+		TopScoresService.getStats();
 	};
 
 	topScoresCtrl.showModals = function(handler){
@@ -20,4 +21,7 @@ chkHighScoresApp.controller("TopScoresController", function ($scope, $state, $ro
 	$rootScope.$on('$stateChangeSuccess', function() {
     	document.body.scrollTop = document.documentElement.scrollTop = 0;
   	});
+
+  	var easter_egg = new Konami('https://store.playstation.com/#!/es-ar/juegos-gratuitos/cid=STORE-MSF77008-PSPLUSFREEGAMESL');
+
 });

@@ -17,6 +17,11 @@ angular.module('chkHighScoresApp').config(function ($stateProvider, $urlRouterPr
     templateUrl: 'views/error.html'
   });
 
+  $stateProvider.state('stats', {
+    url: '/stats',
+    templateUrl: 'views/stats.html'
+  });
+
   $urlRouterProvider.otherwise("/");
 
   $qProvider.errorOnUnhandledRejections(false);

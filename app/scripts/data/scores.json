@@ -3,7 +3,299 @@
     {
       "month": "Septiembre",
       "monthNumber": 9,
-      "players":[]
+      "players":[
+        {
+          "name": "Ale Kawokk",
+          "points": 800,
+          "stage": "8-23",
+          "stageLink": "https://www.twitch.tv/videos/174631186",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Seba",
+              "difficulty": 2,
+              "question": "Soul Calibur es una saga de juegos de pelea muy conocida. Como se llama el primer nombre de la saga?",
+              "answer": "Soul Edge",
+              "points": 200
+            },
+            {
+              "number": 2,
+              "checkpointer": "Diegote",
+              "difficulty": 2,
+              "question": "Como se llama el nuevo estudio que formo Fumito Ueda, cuando se divorcio de Sony para finalizar el Last Guardian?",
+              "answer": "-----",
+              "correct": "Gen Design"
+            },
+            {
+              "number": 3,
+              "checkpointer": "Dieguito",
+              "difficulty": 2,
+              "question": "De que juego es la musica estamos escuchando?",
+              "answer": "Castlevania; Symphony of the night",
+              "points": 200
+            },
+            {
+              "number": 4,
+              "checkpointer": "Guille",
+              "difficulty": 2,
+              "question": "A que integrante de la familia Adams controlamos en la primera entrega de juegos de la Familia Adams?",
+              "answer": "Homero",
+              "points": 200
+            },
+            {
+              "number": 5,
+              "checkpointer": "Fede",
+              "difficulty": 2,
+              "question": "Como se llama en el Final Fantasy VII el arma de Sephirot?",
+              "answer": "Masamune",
+              "points": 200
+            }
+          ]
+        },
+        {
+          "name": "Gaspar",
+          "points": 800,
+          "stage": "8-25",
+          "stageLink": "https://www.twitch.tv/videos/178051916",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Dieguito",
+              "difficulty": 1,
+              "question": "En Super Mario 3D World de WiiU podemoso disfrazarnos de un animalito que no podiamos antes. Cual es?",
+              "answer": "Abeja",
+              "correct": "Gato"
+            },
+            {
+              "number": 2,
+              "checkpointer": "Dieguito",
+              "difficulty": 2,
+              "question": "En Batman Arkham City, quien es el villano que inicia el conflicto en la historia?",
+              "answer": "Catwoman",
+              "points": 200
+            },
+            {
+              "number": 3,
+              "checkpointer": "Guille",
+              "difficulty": 2,
+              "question": "Si mencionamos a Rash, Pimple y Zizt. De que saga de juegos estamos hablando?",
+              "answer": "Battletoads",
+              "points": 200
+            },
+            {
+              "number": 4,
+              "checkpointer": "Fede",
+              "difficulty": 2,
+              "question": "Que videojuego es conocido por generar el famoso Video Game Crash de 1983?",
+              "answer": "ET",
+              "points": 200
+            },
+            {
+              "number": 5,
+              "checkpointer": "Dieguito",
+              "difficulty": 2,
+              "question": "En el Maniac Mansion 1, cuantos personajes podes elejir?",
+              "answer": "Dos",
+              "points": 200
+            }
+          ]
+        },
+        {
+          "name": "Gustavo Iky Robles",
+          "points": 600,
+          "stage": "8-25",
+          "stageLink": "https://www.twitch.tv/videos/178051916",
+          "position": "third",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Guille",
+              "difficulty": 2,
+              "question": "En que juego tratabamos de salvar cachorros al ritmo de la siguiente tarantela?",
+              "answer": "Earthworm Jim 2",
+              "points": 200
+            },
+            {
+              "number": 2,
+              "checkpointer": "Dieguito",
+              "difficulty": 1,
+              "question": "En Wolfestein 3D de 1992. Quien es el jefe final?",
+              "answer": "Mechahitler",
+              "points": 100
+            },
+            {
+              "number": 3,
+              "checkpointer": "Fede",
+              "difficulty": 1,
+              "question": "Como se llamo la fallida consola de Nintendo que intento llevar la realidad virtual a nuestros hogares?",
+              "answer": "Virtual Boy",
+              "points": 100
+            },
+            {
+              "number": 4,
+              "checkpointer": "Seba",
+              "difficulty": 2,
+              "question": "En que juego y que stage pertenece el siguiente tema?",
+              "answer": "Street Fighter II - Chun Li",
+              "correct": "Street Fighter II - Honda"
+            },
+            {
+              "number": 5,
+              "checkpointer": "Diegote",
+              "difficulty": 3,
+              "question": "En Super Street Fighter II The New Challengers. Como se llaman y de que nacionalidad son los New Challengers?",
+              "answer": "Son 3?",
+              "correct": "T. Hawk-México / Dee Jay-Jamaica / Fei Long-Hong Kong / Cammy-Inglaterra"
+            }
+          ]
+        },
+        {
+          "name": "Santiago Colonel",
+          "points": 600,
+          "stage": "8-25",
+          "stageLink": "https://www.twitch.tv/videos/178051916",
+          "position": "third",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Seba",
+              "difficulty": 2,
+              "question": "Nombre completo de la iteracion de Mortal Kombat de lucha donde se pueden usar armas por primera vez",
+              "answer": "Mortal Kombat Deadly Alliance",
+              "correct": "Mortal Kombat IV"
+            },
+            {
+              "number": 2,
+              "checkpointer": "Diegote",
+              "difficulty": 2,
+              "question": "Como se llama el primer juego de Spider-man que por primera vez permitia columpearse libremente por la ciudad con una fisica realista en el lanzamiento de telarañas con un estilo de juego a la GTA?",
+              "answer": "Spider-man 2 de PS2",
+              "points": 200
+            },
+            {
+              "number": 3,
+              "checkpointer": "Fede",
+              "difficulty": 2,
+              "question": "Si escuchas esto, a que juego estas jugando?",
+              "answer": "Quake",
+              "points": 200
+            },
+            {
+              "number": 4,
+              "checkpointer": "Diegote",
+              "difficulty": 2,
+              "question": "Cual es el nombre extremadamente similar al Journey que cambia arena y nieve por agua?",
+              "answer": "Abzu",
+              "points": 200
+            },
+            {
+              "number": 5,
+              "checkpointer": "Dieguito",
+              "difficulty": 3,
+              "question": "Batman Arkham Asylum, Darksiders y Full Throttle tienen algo en comun. Que es eso que tienen en comun?",
+              "answer": "Fue desarrollado con el mismo diseñador",
+              "correct": "Mark Hammill hizo las voces"
+            }
+          ]
+        },
+        {
+          "name": "Santiago Saraceno",
+          "points": 400,
+          "stage": "8-23",
+          "stageLink": "https://www.twitch.tv/videos/174631186",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Diegote",
+              "difficulty": 2,
+              "question": "En Heavy Rain todos recordamos el famoso 'Jason, Jason' cual es el nombre del otro hijo de Ethan",
+              "answer": "Shawn",
+              "points": 200
+            },
+            {
+              "number": 2,
+              "checkpointer": "Guille",
+              "difficulty": 3,
+              "question": "Como es el nombre de pila del unico personaje femenino de la familia Belmont que controlamos en la saga Castlevania?",
+              "answer": "Clara",
+              "correct": "Sonia"
+            },
+            {
+              "number": 3,
+              "checkpointer": "Sam",
+              "difficulty": 2,
+              "question": "En que Metal Gear se introducen los Gekkos como enemigos?",
+              "answer": "Cuatro",
+              "points": 200
+            },
+            {
+              "number": 4,
+              "checkpointer": "Facu",
+              "difficulty": 2,
+              "question": "Como se llama en Japon el personaje de Protoman o Bass?",
+              "answer": "Don pepe y su globo",
+              "correct": "Blues y Forte"
+            },
+            {
+              "number": 5,
+              "checkpointer": "Seba",
+              "difficulty": 3,
+              "question": "Son of the enders es recordado por ser una apuesta diferente de Kojima. Como se llama la inteligencia artificial que esta instalada dentro de Jehuty?",
+              "answer": "IA",
+              "correct": "A.D.A."
+            }
+          ]
+        },
+        {
+          "name": "Lucas Schmidt",
+          "points": 0,
+          "stage": "8-23",
+          "stageLink": "https://www.twitch.tv/videos/174631186",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Fede",
+              "difficulty": 2,
+              "question": "A que saga de videojuegos pertenece esta musica?",
+              "answer": "Castlevania",
+              "correct": "Legacy of Kain"
+            },
+            {
+              "number": 2,
+              "checkpointer": "Seba",
+              "difficulty": 2,
+              "question": "El tema que se va a escuchar a continuacion adorna el primer nivel de un juego consagrado de Mega Drive. Nombrar ese juego.",
+              "answer": "Arkanoid",
+              "correct": "Rocket Knight"
+            },
+            {
+              "number": 3,
+              "checkpointer": "Guille",
+              "difficulty": 3,
+              "question": "En que iteracion de la saga Street Fighter aparece por primera vez el personaje Birdie?",
+              "answer": "Tres",
+              "correct": "Uno"
+            },
+            {
+              "number": 4,
+              "checkpointer": "Facu",
+              "difficulty": 1,
+              "question": "Para que sirve la herba azul en los juegos clasicos del Resident Evil?",
+              "help": "Suele encontrarse como item individual o en conjunto para usar en el momento",
+              "answer": "-------",
+              "correct": "Para curarse del veneno"
+            },
+            {
+              "number": 5,
+              "checkpointer": "Dieguito",
+              "difficulty": 1,
+              "question": "Que franquicia de juegos esta basada en administrar y llevar a buen puerto un grupo de seres idiotas, suicidas y obedientes que usan tunica azul y pelo verde",
+              "answer": "------",
+              "correct": "Lemmings"
+            }
+          ]
+        }
+      ]
     },
     {
       "month": "Agosto",

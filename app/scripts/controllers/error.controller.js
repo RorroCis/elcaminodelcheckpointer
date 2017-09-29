@@ -19,4 +19,6 @@ chkHighScoresApp.controller("ErrorController", function ($scope, $state, ErrorSe
 	errorCtrl.emulator = new NesNes(nesnes);
 	errorCtrl.getRoms();
 	
+	
+  	var easter_egg = new Konami('https://store.playstation.com/#!/es-ar/juegos-gratuitos/cid=STORE-MSF77008-PSPLUSFREEGAMESL');
 });

@@ -13,10 +13,12 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Automatically load required Grunt tasks
+  
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin',
     ngtemplates: 'grunt-angular-templates',
-    cdnify: 'grunt-google-cdn'
+    cdnify: 'grunt-google-cdn',
+    postcss: 'postcss'
   });
 
   // Configurable paths for the application
@@ -43,10 +45,6 @@ module.exports = function (grunt) {
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
-      },
-      jsTest: {
-        files: ['test/spec/{,*/}*.js'],
-        tasks: ['newer:jshint:test', 'newer:jscs:test']
       },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
@@ -174,7 +172,7 @@ module.exports = function (grunt) {
     postcss: {
       options: {
         processors: [
-          require('autoprefixer-core')({browsers: ['last 1 version']})
+          require('autoprefixer')({browsers: ['last 1 version']})
         ]
       },
       server: {
@@ -379,10 +377,11 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '*.html',
-            'img/{,*/}*.{webp}',
+            'img/{,*/}*.*',
             'styles/fonts/{,*/}*.*',
             'fonts/{,*/}*.*',
             'roms/{,*/}*.*',
+            'views/{,*/}*.*',
             'scripts/data/{,*/}*.*'
           ]
         }, {
@@ -429,7 +428,7 @@ module.exports = function (grunt) {
       'clean:server',
       'wiredep',
       'concurrent:server',
-      'postcss:server',
+      //'postcss:server',
       'connect:livereload',
       'watch'
     ]);
@@ -453,20 +452,18 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
-    'postcss',
-    'ngtemplates',
+    //'ngtemplates',
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
+    //'cdnify',
     'cssmin',
-    'filerev',
+    //'filerev',
     'usemin',
     'htmlmin'
   ]);
 
   grunt.registerTask('default', [
-    'newer:jscs',
     'test',
     'build'
   ]);

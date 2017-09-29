@@ -6,7 +6,7 @@
     <h1>-&nbsp;&nbsp;&nbsp;EL CAMINO DEL CHECKPOINTER&nbsp;&nbsp;&nbsp;-</h1>
     <!-- ES UN CAMPEONATO MUY DIFICIL PORQUE VA MUY RAPIDO!  --> 
     
-    <div class=" col-sm-offset-1 col-md-offset-1 col-xs-12 col-sm-10 col-md-10 row">
+    <div class=" col-sm-offset-1 col-md-offset-1 col-xs-offset-0 col-xs-12 col-sm-10 col-md-10 row">
       <hr>
       <span ng-repeat="month in topScoresCtrl.results | orderBy:'-monthNumber'">
         <a class="months ee clickable" ng-click="topScoresCtrl.currentMonth=month.monthNumber">{{month.month}}</a>
@@ -15,7 +15,7 @@
       <hr>
     </div>
     
-    <div class="col-sm-offset-1 col-md-offset-1 col-xs-12 col-sm-10 col-md-10 row" 
+    <div class="col-sm-offset-1 col-md-offset-1 col-xs-offset-0 col-xs-12 col-sm-10 col-md-10 row" 
            ng-repeat="month in topScoresCtrl.results | orderBy:'-monthNumber'" >
       
       <div ng-if="topScoresCtrl.currentMonth == month.monthNumber" class="score-table">
@@ -71,6 +71,9 @@
 
     </div>
 
+    <div class="col-xs-12 col-sm-12 col-md-12 row text-center check-stats">
+      <h2><a class="pixel-text ee clickable" ui-sref="stats">Check stats</a></h2>
+    </div>
     <div class="col-xs-12 col-sm-12 col-md-12 start row text-center">
       <h2><a class="pixel-text " ui-sref="about">{{topScoresCtrl.start}}</a></h2>
     </div>

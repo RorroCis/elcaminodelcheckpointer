@@ -150,13 +150,21 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .tenth, .player-10{
   color: #f00f0f;
 }
-.start{
+.check-stats{
   margin-top: 30px;
 }
-.start a{
+.start a, .check-stats a{
   text-decoration: none;
+}
+.start a{
   font-size: 0.75em;
   color: #0f0;
+}
+.check-stats a{
+  font-size: 1em;
+}
+.check-stats h2{
+  color: #0ff;
 }
 .rules span{
 }
@@ -236,24 +244,24 @@ span.mail, span.mail span{
 }
 .modal-content{
   background: #000;
-    border: 3px solid #ff0;
+  border: 3px solid #ff0;
 }
 .modal .close{
   color: #ff0;
 }
-.modal .checkpointer{
+.modal .checkpointer, .checkpointer{
   color:#f00;
 }
-.modal .question{
+.modal .question, .question{
   color:#ff0;
 }
-.modal .answer{
+.modal .answer, .answer{
   color:#f0f;
 }
-.modal .points{
+.modal .points, .points{
   color:#05f;
 }
-.modal .help{
+.modal .help, .help{
   color: #0ff;
 }
 a.ee {
@@ -276,4 +284,17 @@ a.ee:hover, a.ee:focus {
   left: 50%;
   margin-top: -35px;
   margin-left: -150px;
+}
+.checkpointers-stats{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px){
+  .checkpointer-stats{
+    width: 14%;
+  }
+}
+
+.checkpointer-stats .img-responsive{
+  margin: 0 auto;
 }

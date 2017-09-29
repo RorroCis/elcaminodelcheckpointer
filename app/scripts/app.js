@@ -34,7 +34,8 @@
   });
 */
 var chkHighScoresApp = angular.module('chkHighScoresApp', 
-  ['angular-loading-bar', 'ngResource', 'ngAnimate', 'ui.router','ui.bootstrap', 'pascalprecht.translate', 'ngSanitize'])
+  ['angular-loading-bar', 'ngResource', 'ngAnimate', 'ui.router','ui.bootstrap', 
+  'pascalprecht.translate', 'ngSanitize', 'googlechart'])
   .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
       cfpLoadingBarProvider.includeSpinner = false;
     }]);

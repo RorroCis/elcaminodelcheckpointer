@@ -1,0 +1,100 @@
+<div class="col-sm-12 col-md-12 text-center text-uppercase" ng-controller="StatsController as statsCtrl">
+
+  <div class="col-mxs-12 col-sm-12 col-md-12" style="margin-top: 20px;">
+    <a ui-sref="topscores" class="col-xs-12 col-sm-2 col-md-2 pixel-text text-left get-back">{{statsCtrl.back}}</a>
+    <h1 class="col-mxs-12 col-sm-12 col-md-12" style="margin-top: -30px;">-&nbsp;&nbsp;&nbsp;STATS&nbsp;&nbsp;&nbsp;-</h1>
+    <div class=" col-sm-offset-1 col-md-offset-1 col-xs-offset-0 col-xs-12 col-sm-10 col-md-10 row">
+      <hr>
+        <a class="months ee clickable" ng-click="statsCtrl.comparativa=false">Por Checkpointer</a> 
+        | 
+        <a class="months ee clickable" ng-click="statsCtrl.comparativa=true">Comparativa</a>
+      <hr>
+    </div>
+    <div class="col-sm-offset-1 col-md-offset-1 col-xs-offset-0 col-xs-12 col-sm-10 col-md-10 text-center" ng-if="!statsCtrl.comparativa">
+      <div class="row checkpointers-stats">
+        <div class="checkpointer-stats col-md-1 col-sm-1 col-xs-3" ng-repeat="chkStat in statsCtrl.stats">
+          <img src="./img/{{chkStat.checkpointer | lowercase}}.png" class="img-responsive img-circle center clickable" ng-click="statsCtrl.checkpointer = chkStat.checkpointer">
+        </div>
+      </div>
+      <hr>
+
+      <div ng-if="statsCtrl.checkpointer == chkStat.checkpointer" class="row" ng-repeat="chkStat in statsCtrl.stats">
+        <h1 style="color: {{chkStat.color}}; margin-top: 20px;">{{chkStat.checkpointer}}</h1>
+        <h2>
+          Preguntas realizadas: {{chkStat.total.cant}}
+        </h2>
+        <div class=" col-sm-offset-1 col-md-offset-1 col-xs-offset-0 col-xs-12 col-sm-10 col-md-10 row" style="margin-bottom:30px">
+          <hr>
+            <a class="ee clickable" ng-click="chkStat.showQuestions=false">Stats</a> 
+            | 
+            <a class="ee clickable" ng-click="chkStat.showQuestions=true">Preguntas</a>
+          <hr>
+        </div>
+        <div ng-if="!chkStat.showQuestions" style="margin-top: 50px;">   
+          <div class="row" >
+            <div class="col-md-6">
+              <span>Resultados</span>
+              <div google-chart chart="chkStat.results.total" style="height:300px; width:100%; margin-top:-50px"></div>
+            </div>
+            <div class="col-md-6">
+              <span>Por dificultad</span>
+              <div google-chart chart="chkStat.difficulty" style="height:300px; width:100%; margin-top:-50px"></div>
+            </div>
+          </div>
+
+          <div class="row">   
+            <div class="col-sm-4 col-md-4">
+              <span>Faciles</span>
+              <div google-chart chart="chkStat.results.easy" style="height:300px; width:100%; margin-top:-50px" ng-if="chkStat.easy.cant > 0"></div>
+              <span ng-if="chkStat.easy.cant == 0"><br><br><br><br>No hizo preguntas</span>
+            </div>
+            <div class="col-sm-4 col-md-4">
+              <span>Medias</span>
+              <div google-chart chart="chkStat.results.medium" style="height:300px; width:100%; margin-top:-50px" ng-if="chkStat.medium.cant > 0"></div>
+              <span ng-if="chkStat.medium.cant == 0"><br><br><br><br>No hizo preguntas</span>
+            </div>
+            <div class="col-sm-4 col-md-4">
+              <span>Dificiles</span>
+              <div google-chart chart="chkStat.results.hard" style="height:300px; width:100%; margin-top:-50px" ng-if="chkStat.hard.cant > 0"></div>
+              <span ng-if="chkStat.hard.cant == 0"><br><br><br><br>No hizo preguntas</span>
+            </div>
+          </div>
+        </div>
+      
+        <div ng-if="chkStat.showQuestions" class="col-sm-offset-1 col-md-offset-1 col-xs-offset-0 col-xs-12 col-sm-10 col-md-10 row text-justify pixel-text" style="margin-bottom: 70px;"> 
+          <div ng-repeat="question in chkStat.questions">
+            <span class="checkpointer">{{question.difficulty | difficulty}}:</span><br>
+            <span class="question">Pregunta:</span> {{question.question}}<br>
+            <span ng-if="question.help"><span class="help">Ayuda:</span> {{question.help}}<br></span>
+            <span class="answer">Respuesta:</span> {{question.answer}}<br>
+            <span ng-if="question.correct"><span class="correct">Correcta:</span> {{question.correct}}<br></span>
+            <span ng-if="question.points"><span class="points">Correcta!</span><br></span>
+            <br ng-if="!$last">
+          </div>
+        </div>
+      
+      </div>
+    </div>
+
+    <div class="col-sm-offset-1 col-md-offset-1 col-xs-offset-0 col-xs-12 col-sm-10 col-md-10 row text-center" ng-if="statsCtrl.comparativa">
+      <div class="col-sm-6 col-md-6" style="margin-top: 20px;">
+        <span>Que dificultad le piden a cada checkpointer</span>
+        <div google-chart chart="statsCtrl.compByDifficulty" style="height:300px; width:100%; margin-top:-50px"></div>
+      </div>
+      <div class="col-sm-6 col-md-6" style="margin-top: 20px;">
+        <span>Como les fue con cada uno</span>
+        <div google-chart chart="statsCtrl.compByAnswers" style="height:300px; width:100%; margin-top:-50px"></div>
+      </div>
+      <div class="col-sm-6 col-md-6" style="margin-top: 20px;">
+        <span>Cual es el checkpointer mas dificil</span>   
+        <div google-chart chart="statsCtrl.compByWrong" style="height:300px; width:100%; margin-top:-50px"></div>
+      </div>
+      <div class="col-sm-6 col-md-6" style="margin-top: 20px;">
+        <span>A quien le respondieron mas preguntas bien</span>
+        <div google-chart chart="statsCtrl.compByRight" style="height:300px; width:100%; margin-top:-50px"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
