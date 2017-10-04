@@ -1,0 +1,25 @@
+<div class="select-player-container text-center row" ng-controller="SelectPlayerController as selectPlayerCtrl">
+  <div class="loader" ng-if="!selectPlayerCtrl.finalists">
+    <h1 class="pixel-text">Now Loading...</h1>
+  </div>
+  <div ng-if="selectPlayerCtrl.finalists">
+    <h1 class="col-xs-12 col-sm-12 col-md-12 final-title">La gran final</h1>
+    <div class="col-xs-12 col-sm-8 col-md-8 col-xs-offset-0 col-sm-offset-2 col-md-offset-2 finalist">
+      <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="finalist in selectPlayerCtrl.finalists | orderBy:'monthNumber'">
+        <h2 class="player">Player {{$index+1}}</h2>
+        <section ng-if="finalist.name">
+          <h2 class="month">{{finalist.month}}</h2>
+          <img src="./img/{{finalist.month}}.png" class="col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-xs-10 col-sm-12 col-md-12">
+          <h2 class="player-name">{{finalist.name}}</h2>
+        </section>
+        <section ng-if="!finalist.name">
+          <h2 class="insertCoin">INSERT COIN</h2>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="margin-bottom: 20px;">
+    <a ui-sref="topscores" class="pixel-text get-back">{{selectPlayerCtrl.back}}</a>
+  </div>
+</div>

@@ -4,7 +4,6 @@ chkHighScoresApp.controller("TopScoresController", function ($scope, $state, $ro
 
 	//Gets top socres from service 
 	topScoresCtrl.getTopScores = function(){
-		console.log("Get Top Scores");
 		var topscores = TopScoresService.getTopScores().then(function(data) {
 			topScoresCtrl.results = data.results;
 			topScoresCtrl.currentMonth = data.results[0].monthNumber;

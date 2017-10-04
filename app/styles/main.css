@@ -298,3 +298,69 @@ a.ee:hover, a.ee:focus {
 .checkpointer-stats .img-responsive{
   margin: 0 auto;
 }
+
+.select-player-container{
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: url('../img/select.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-y: scroll;
+}
+
+.finalist{
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.finalist h2.player{
+  background: -webkit-linear-gradient(#008, #009, #03f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  margin-bottom: 0px;
+}
+
+.finalist h2.month{
+  margin-bottom: 0px;
+  background: -webkit-linear-gradient(#ff0, #f70, #900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.finalist h2.player-name{
+  margin-bottom: 30px;
+  background: -webkit-linear-gradient(#ff0,#ff0,#ff0,#ff0,#ff0,#ff0, #f70,#f70,#f70, #900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.finalist h2.insertCoin{
+  background: -webkit-linear-gradient(#008, #009, #03f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.final-title{
+  font-size: 50px;
+  background: -webkit-linear-gradient(#300, #900, #c00);
+  margin-top: 10%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 992px){
+    .final-title{
+      margin-top: 30%;
+    }
+  .select-player-container{
+    position: static;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: url('../img/select.png') no-repeat top center; 
+    overflow: hidden;
+  }
+  .finalist h2{
+    font-size: 36px;
+  }
+}

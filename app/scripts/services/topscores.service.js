@@ -120,8 +120,27 @@ chkHighScoresApp.factory('TopScoresService', function($http) {
 			});
 			return questions;
 		};	
+
+		//Get stats from all the questions 
+		var getFinalists = function(){
+			var finalists = getTopScores().then(function(data) {
+				var players = [];
+				_.forEach(data.results, function(month) {
+					var finalist = _.find(month.players, function(player) { return player.position == "first"; });
+			  		if (typeof(finalist) !== 'undefined'){
+			  			finalist.month = month.month;
+			  			finalist.monthNumber = month.monthNumber;
+						players.push(finalist);
+					}
+				});
+				return players;
+			});
+			return finalists;
+		};	
+
 	return{
 		getTopScores : getTopScores,
+		getFinalists : getFinalists,
 		getAllQuestions : getAllQuestions,
 		getStats : getStats
 	}

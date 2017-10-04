@@ -22,6 +22,11 @@ angular.module('chkHighScoresApp').config(function ($stateProvider, $urlRouterPr
     templateUrl: 'views/stats.html'
   });
 
+  $stateProvider.state('selectPlayer', {
+    url: '/selectPlayer',
+    templateUrl: 'views/selectPlayer.html'
+  });
+
   $urlRouterProvider.otherwise("/");
 
   $qProvider.errorOnUnhandledRejections(false);
