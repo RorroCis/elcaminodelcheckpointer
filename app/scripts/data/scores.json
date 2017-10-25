@@ -1,14 +1,167 @@
 {
   "results": [
     {
+      "month": "Octubre",
+      "monthNumber": 10,
+      "players":[
+        {
+          "name": "Osma Powers",
+          "points": 700,
+          "stage": "8-27",
+          "stageLink": "https://www.twitch.tv/videos/181602460",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Dieguito",
+              "difficulty": 2,
+              "question": "En el bar de que juego se escucha la siguiente cancion?",
+              "answer": "Bayonetta",
+              "points": 200
+            },
+            {
+              "number": 2,
+              "checkpointer": "Sam",
+              "difficulty": 2,
+              "question": "Como se llama el armero y propietario del bar 'Las puertas del Infierno' del Bayonetta?",
+              "answer": "Rodin",
+              "points": 200
+            },
+            {
+              "number": 3,
+              "checkpointer": "Fede",
+              "difficulty": 1,
+              "question": "En Checkpoint quien es o como le decimos el pelado mas mencionado?",
+              "answer": "Chaju - Kratos",
+              "correct": "El pelado de Aqua"
+            },
+            {
+              "number": 4,
+              "checkpointer": "Facu",
+              "difficulty": 1,
+              "question": "Dragon Ball en Play 1 tuvo 3 juegos. Me tenes que decir alguno.",
+              "answer": "Final Bout, Ultimate Battle 22, Legends",
+              "points": 100
+            },
+            {
+              "number": 5,
+              "checkpointer": "Diegote",
+              "difficulty": 2,
+              "question": "Cual fue el problema principal que llevo a la Panasonic 3DO al fracaso?",
+              "answer": "El precio",
+              "points": 200
+            }
+          ]
+        },
+        {
+          "name": "Marcos Poca",
+          "points": 500,
+          "stage": "8-27",
+          "stageLink": "https://www.twitch.tv/videos/181602460",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Seba",
+              "difficulty": 2,
+              "question": "De que juego es esta intro?",
+              "answer": "Mision Imposible",
+              "correct": "Goldeneye 007"
+            },
+            {
+              "number": 2,
+              "checkpointer": "Fede",
+              "difficulty": 2,
+              "question": "En que video juego desarrollado en argentina controlamos una turba iracunda de griegos?",
+              "answer": "Okhlos",
+              "points": 200
+            },
+            {
+              "number": 3,
+              "checkpointer": "Facu",
+              "difficulty": 3,
+              "question": "Cual es la diferencia sustancial entre Pump it up y Dance Dance Revolution?",
+              "answer": "La diferencia en la cantidad de botones",
+              "points": 300
+            },
+            {
+              "number": 4,
+              "checkpointer": "Diegote",
+              "difficulty": 2,
+              "question": "Dentro de la saga Tomb Rider la iteracion Chronicles tiene una particularidad que la diferencia del resto, en su planteo de historia o plot. Cual es esa diferencia?",
+              "help" : "Tiene que ver con el final de Last Revelation",
+              "answer": "------",
+              "correct": "Como en el final del Last Revelation, supuestamente Lara esta muerta, en el Chronicles jugas historias que cuentan sus amigos y conocidos."
+            },
+            {
+              "number": 5,
+              "checkpointer": "Dieguito",
+              "difficulty": 3,
+              "question": "En el juego Bioshock infinit cuales dos dibujos podiamos elegir para el colgante de Elizabeth?",
+              "help" : "*Ruido de pajaro*",
+              "answer": "Un pajaro y un perro",
+              "correct": "Un pajaro y una jaula"
+            }
+          ]
+        },
+        {
+          "name": "Santiago Saraceno",
+          "points": 200,
+          "stage": "8-27",
+          "stageLink": "https://www.twitch.tv/videos/181602460",
+          "questions":[
+            {
+              "number": 1,
+              "checkpointer": "Sam",
+              "difficulty": 2,
+              "question": "En que Spyro aparece la dragoncita rosa Ember?",
+              "answer": "Spyro 2",
+              "correct": "Spyro 5: A hero's tail"
+            },
+            {
+              "number": 2,
+              "checkpointer": "Dieguito",
+              "difficulty": 2,
+              "question": "Cual es el nombre del tio de Ezio Auditore en Assassin's Creed II?",
+              "answer": "Mario",
+              "points": 200
+            },
+            {
+              "number": 3,
+              "checkpointer": "Seba",
+              "difficulty": 3,
+              "question": "Quien es el primer jugador de la izquierda en la seleccion de personajes del Virtua Tennis 2?",
+              "answer": "Taraskul",
+              "correct": "Patrick Rafter"
+            },
+            {
+              "number": 4,
+              "checkpointer": "Seba",
+              "difficulty": 3,
+              "question": "Nombrame a los cuatro Sunset Raiders",
+              "answer": "Es el juego del chabon con poncho rosa?",
+              "correct": "Billy, Cormano, Bob, Steve"
+            },
+            {
+              "number": 5,
+              "checkpointer": "Sam",
+              "difficulty": 3,
+              "question": "Cual es el nombre del personaje que manjemos en el Gone Home?",
+              "answer": "-------",
+              "correct": "Kaitlin Greenbriar"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "month": "Septiembre",
       "monthNumber": 9,
       "players":[
         {
           "name": "Ale Kawokk",
-          "points": 800,
+          "points": 802,
           "stage": "8-23",
           "stageLink": "https://www.twitch.tv/videos/174631186",
+          "position": "second",
           "questions":[
             {
               "number": 1,
@@ -49,14 +202,71 @@
               "question": "Como se llama en el Final Fantasy VII el arma de Sephirot?",
               "answer": "Masamune",
               "points": 200
+            },
+            {
+              "number": "Desempate 1",
+              "checkpointer": "Facu",
+              "difficulty": 2,
+              "question": "Como se va a llamar el hijo de Kratos en el nuevo God of War?",
+              "answer": "-------",
+              "correct": "Atreus"
+            },
+            {
+              "number": "Desempate 2",
+              "checkpointer": "Seba",
+              "difficulty": 2,
+              "question": "Me tenes que decir el nombre del juego, este es el tema que se escucha en la intro",
+              "answer": "Silent Hill",
+              "points": 1
+            },
+            {
+              "number": "Desempate 3",
+              "checkpointer": "Guille",
+              "difficulty": 2,
+              "question": "De cuentas entregas consiste al dia de hoy la saga Broken Sword?",
+              "answer": "Cinco",
+              "points": 1
+            },
+            {
+              "number": "Desempate 4",
+              "checkpointer": "Diegote",
+              "difficulty": 2,
+              "question": "En el clasico de clasicos, double dragon, que combinacion de botones utilizamos para ejecutar el golpe famoso del codazo?",
+              "answer": "Piña y Patada",
+              "correct": "Piña y Salto"
+            },
+            {
+              "number": "Desempate 5",
+              "checkpointer": "Sam",
+              "difficulty": 2,
+              "question": "En el Day of the tentacle no encontramos con la parodia de distintos proceres norte americanos cuaundo estamos manejando a Hoagie. A quienes estan parodiando? Nombra al menos a tres.",
+              "answer": "-------",
+              "correct": "Washington, Eddison, Thomas Jefferson, Franklyn"
+            },
+            {
+              "number": "Desempate 6",
+              "checkpointer": "Fede",
+              "difficulty": 2,
+              "question": "Resident Evil 1, 2 y 3 y Final Fantasy VII, VIII y IX utilizan una tecnica videojueguil en sus escenarios, de manera de poder mostrar mejores detalles en sus personajes. Que tecnica es?",
+              "answer": "-------",
+              "correct": "Fondos pre-renderizados"
+            },
+            {
+              "number": "Desempate 7",
+              "checkpointer": "Dieguito",
+              "difficulty": 2,
+              "question": "En que obra de Piotr Ilich Chaikovski esta basado el juego Loom?",
+              "answer": "-------",
+              "correct": "El lago de los cisnes"
             }
           ]
         },
         {
-          "name": "Gaspar",
-          "points": 800,
+          "name": "Gaspar Coronel",
+          "points": 803,
           "stage": "8-25",
           "stageLink": "https://www.twitch.tv/videos/178051916",
+          "position": "first",
           "questions":[
             {
               "number": 1,
@@ -97,6 +307,62 @@
               "question": "En el Maniac Mansion 1, cuantos personajes podes elejir?",
               "answer": "Dos",
               "points": 200
+            },
+            {
+              "number": "Desempate 1",
+              "checkpointer": "Seba",
+              "difficulty": 2,
+              "question": "Como se llama el escuadron de elite que intenta elimar a raiden y solid snake en metal gear solid II?",
+              "answer": "----",
+              "correct": "Dead Cell"
+            },
+            {
+              "number": "Desempate 2",
+              "checkpointer": "Guille",
+              "difficulty": 2,
+              "question": "Como se llama la organizacion criminal fundada por Bison o Vega (segun de donde) el antagonista principal de la saga Street Fighter?",
+              "answer": "Street Fighter",
+              "correct": "Shadaloo"
+            },
+            {
+              "number": "Desempate 3",
+              "checkpointer": "Diegote",
+              "difficulty": 2,
+              "question": "Como se llama el video juego original de arcade de tipo rail shooter que tenia la caracteristica de ser video filmado con actores reales y que estaba ambientado en el viejo oeste?",
+              "answer": "Mad Dog McCree",
+              "points": 1
+            },
+            {
+              "number": "Desempate 4",
+              "checkpointer": "Sam",
+              "difficulty": 2,
+              "question": "Como se llama el dungeon opcional del shin megami tensei nocturne?",
+              "answer": "Akira Toriyama",
+              "correct": "Laberinto de Amala"
+            },
+            {
+              "number": "Desempate 5",
+              "checkpointer": "Fede",
+              "difficulty": 2,
+              "question": "Que significan las siglas BFG en el universo de DOOM?",
+              "answer": "Big Fucking Gun",
+              "points": 1
+            },
+            {
+              "number": "Desempate 6",
+              "checkpointer": "Facu",
+              "difficulty": 2,
+              "question": "De que Final Fantasy es protagonista Cecil?",
+              "answer": "Cuatro",
+              "points": 1
+            },
+            {
+              "number": "Desempate 7",
+              "checkpointer": "Dieguito",
+              "difficulty": 2,
+              "question": "En cuales iteraciones de la saga Uncharted aparece Chloe? La morocha de buen culo",
+              "answer": "En dos iteraciones",
+              "correct": "El dos, el tres y el Lost Legacy"
             }
           ]
         },
@@ -303,7 +569,7 @@
       "players":[
         {
           "name": "Juani Molina",
-          "points": 400,
+          "points": 500,
           "stage": "8-19",
           "stageLink": "https://www.twitch.tv/videos/167565113",
           "position": "first",
@@ -337,7 +603,8 @@
               "checkpointer": "Fede",
               "difficulty": 1,
               "question": "Como se llama la protagonista de la saga Perfect Dark?",
-              "answer": "Joanna Dark"
+              "answer": "Joanna Dark",
+              "points": 100
             }
           ]
         },
