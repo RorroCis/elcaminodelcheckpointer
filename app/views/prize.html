@@ -1,0 +1,14 @@
+<div class="col-sm-12 col-md-12 text-center password" ng-controller="PasswordController as passCtrl">
+  <div class="col-xs-offset-0 col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8"> 
+    <div ng-if="passCtrl.hash!=passCtrl.passwordHash" class="password-content">
+      <h1 class="prize-title">Yo se que panqueque:</h1>
+      <input  ng-model="passCtrl.password" class="col-md-12 col-sm-12 col-xs-12" ng-keyup="$event.keyCode == 13 && passCtrl.checkPassword()">
+      <span class="pixel-text" ng-show="passCtrl.wrongPass" style="color: #f00;">¡Ah, ah, ah! ¡No dijiste la palabra magica!</span><br>
+      <a ng-click="passCtrl.checkPassword()" class="btn btn-primary">Dale Gordow!</a>
+    </div>
+    <div ng-if="passCtrl.hash==passCtrl.passwordHash" class="password-hide">
+      <h1>Pero los queremos igual!!!</h1>
+      <iframe width="800" height="450" src="https://www.youtube.com/embed/CmJD_nKPa-Q" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

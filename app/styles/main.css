@@ -110,8 +110,11 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
   outline: none;
   outline-offset: none;
 }
-.header, .score, .months{
+.header, .score{
   font-size: 1.46em;
+}
+.months{
+  font-size: 1.1em;
 }
 @media (max-width: 768px){
   .header, .score, .months{
@@ -291,7 +294,7 @@ a.ee:hover, a.ee:focus {
 }
 @media (min-width: 768px){
   .checkpointer-stats{
-    width: 14%;
+    width: 12.5%;
   }
 }
 
@@ -330,7 +333,7 @@ a.ee:hover, a.ee:focus {
   -webkit-text-fill-color: transparent;
 }
 
-.finalist h2.player-name{
+h2.player-name{
   margin-bottom: 30px;
   background: -webkit-linear-gradient(#ff0,#ff0,#ff0,#ff0,#ff0,#ff0, #f70,#f70,#f70, #900);
   -webkit-background-clip: text;
@@ -363,4 +366,51 @@ a.ee:hover, a.ee:focus {
   .finalist h2{
     font-size: 36px;
   }
+}
+.prize-title{
+  font-size: 60px;
+  color: #ff0;
+}
+.snes-slogan{
+  font-style: italic;
+  font-size: 75px;
+}
+.grey-color{
+  color:#dad8db;
+}
+.password input{
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-size: xx-large;
+}
+.password .btn-primary{
+  margin-top: 15px;
+  font-size: 20px;
+  background-color: #0c0;
+  border-color: #0c0;
+}
+.password .btn-primary:hover,
+.password .btn-primary:focus{
+  background-color: #090;
+  border-color: #090;
+}
+.password .password-content{
+  margin-top: 175px;
+}
+.password .password-hide{
+  margin-top: 75px;
+}
+.versus-icon{
+  margin-bottom: 30px; 
+}
+.stage-finals{
+  margin-top: 20%;
+  color: #f00;
+}
+.score-finals{
+  color: #00F;
+}
+.player-name-question{
+ color: #00F; 
 }

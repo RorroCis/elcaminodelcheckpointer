@@ -80,6 +80,20 @@ chkHighScoresApp.factory('TopScoresService', function($http) {
 									"easy":{"cant":0, "right":0, "wrong":0}, 
 									"medium":{"cant":0, "right":0, "wrong":0}, 
 									"hard":{"cant":0, "right":0, "wrong":0},
+									"questions":[]},
+					{"checkpointer":"Vani", "color":"#03a9f4", 
+									"total":{"cant":0, "right":0, "wrong":0}, 
+									"help":0, 
+									"easy":{"cant":0, "right":0, "wrong":0}, 
+									"medium":{"cant":0, "right":0, "wrong":0}, 
+									"hard":{"cant":0, "right":0, "wrong":0},
+									"questions":[]},
+					{"checkpointer":"Faldutti", "color":"#ff9800", 
+									"total":{"cant":0, "right":0, "wrong":0}, 
+									"help":0, 
+									"easy":{"cant":0, "right":0, "wrong":0}, 
+									"medium":{"cant":0, "right":0, "wrong":0}, 
+									"hard":{"cant":0, "right":0, "wrong":0},
 									"questions":[]}
 				];
 

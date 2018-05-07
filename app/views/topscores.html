@@ -8,21 +8,138 @@
     
     <div class=" col-sm-offset-1 col-md-offset-1 col-xs-offset-0 col-xs-12 col-sm-10 col-md-10 row">
       <hr>
+      <!--
       <span>
-        <a class="months ee clickable" ui-sref="selectPlayer">Final</a>
+        <a class="months ee clickable" ui-sref="selectPlayer">Clasificados</a>
         <span ng-if="!$last" class="pixel-text">|</span>
+      </span>-->
+      <span ng-repeat="final in topScoresCtrl.finals | orderBy:'number'">
+        <a class="months ee clickable" ng-click="topScoresCtrl.currentPage=final.number">{{final.number}}</a>
+        <span class="pixel-text">|</span>
       </span>
       <span ng-repeat="month in topScoresCtrl.results | orderBy:'-monthNumber'">
-        <a class="months ee clickable" ng-click="topScoresCtrl.currentMonth=month.monthNumber">{{month.month}}</a>
+        <a class="months ee clickable" ng-click="topScoresCtrl.currentPage=month.month">{{month.month}}</a>
         <span ng-if="!$last" class="pixel-text">|</span>
       </span>
       <hr>
     </div>
     
     <div class="col-sm-offset-1 col-md-offset-1 col-xs-offset-0 col-xs-12 col-sm-10 col-md-10 row" 
+          ng-show="topScoresCtrl.currentPage==final.number"
+          ng-repeat="final in topScoresCtrl.finals | orderBy:'number'" >
+      <div class="score-table">
+        <h2>-&nbsp;&nbsp;{{final.number}}&nbsp;&nbsp;-</h2>
+        <div class="col-md-4 col-sm-4 col-xs-12" ng-if="final.players[0].questions">
+          <img src="./img/{{final.players[0].month}}.png" ng-if="final.players[0].winner" class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-10 col-sm-10 col-md-10 clickable"
+          ng-click="topScoresCtrl.showModals(final.number+'-0')">
+          <img src="./img/{{final.players[0].month}}-lose.png" ng-if="!final.players[0].winner" class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-10 col-sm-10 col-md-10 clickable"
+          ng-click="topScoresCtrl.showModals(final.number+'-0')">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2 class="player-name">{{final.players[0].name}}</h2>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12" ng-if="!final.players[0].questions">
+          <img src="./img/{{final.players[0].month}}.png" class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-10 col-sm-10 col-md-10">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2 class="player-name">{{final.players[0].name}}</h2>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2 class="stage-finals">
+              <a href="{{final.stageLink}}" ng-if="final.stageLink" target="_blank" class="clickable ee">Stage<br>{{final.stage}}</a>
+              <a ng-if="!final.stageLink" target="_blank" class="ee">Stage<br>{{final.stage}}</a>
+            </h2>
+          </div>
+          <img src="./img/vs.png" class="col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-xs-6 col-sm-6 col-md-6 versus-icon clickable" ng-click="topScoresCtrl.showModals(final.number)" title="" ng-if="final.players[0].points && final.players[1].points">
+          <img src="./img/vs.png" class="col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-xs-6 col-sm-6 col-md-6 versus-icon" title="" ng-if="!final.players[0].points || !final.players[1].points">
+          <div class="col-md-12 col-sm-12 col-xs-12" ng-if="final.players[0].points!=null && final.players[1].points!=null">
+            <h2 class="score-finals ee clickable" ng-click="topScoresCtrl.showModals(final.number)">Score<br>{{final.players[0].points}}-{{final.players[1].points}}</h2>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"  ng-if="final.players[1].questions">
+          <img src="./img/{{final.players[1].month}}.png" ng-if="final.players[1].winner" class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-10 col-sm-10 col-md-10 clickable"
+          ng-click="topScoresCtrl.showModals(final.number+'-1')">
+          <img src="./img/{{final.players[1].month}}-lose.png" ng-if="!final.players[1].winner" class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-10 col-sm-10 col-md-10 clickable"
+          ng-click="topScoresCtrl.showModals(final.number+'-1')">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2 class="player-name">{{final.players[1].name}}</h2>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"  ng-if="!final.players[1].questions">
+          <img src="./img/{{final.players[1].month}}.png" class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-10 col-sm-10 col-md-10">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2 class="player-name">{{final.players[1].name}}</h2>
+          </div>
+        </div>
+      </div>
+      <div id="modal-{{final.number}}-{{$index}}" class="modal fade text-justify" tabindex="-1" role="dialog" ng-repeat="player in final.players" ng-if="player.questions"> 
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Preguntas</h4>
+              </div>
+              <div class="modal-body pixel-text">
+                <div ng-repeat="question in player.questions">
+                  <span class="checkpointer">{{question.number}}. {{question.checkpointer}}:</span><br>
+                  <span class="question">Pregunta:</span> {{question.question}}<br>
+                  <span ng-if="question.help"><span class="help">Ayuda:</span> {{question.help}}<br></span>
+                  <span class="answer">Respuesta:</span> {{question.answer}}<br>
+                  <span ng-if="question.correct"><span class="correct">Correcta:</span> {{question.correct}}<br></span>
+                  <span ng-if="question.points"><span class="checkpointer">Correcta!</span><br></span>
+                  <br ng-if="!$last">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <div id="modal-{{final.number}}" class="modal fade text-justify" tabindex="-1" role="dialog"> 
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Preguntas</h4>
+              </div>
+              <div class="modal-body pixel-text">
+                <div ng-repeat="question in final.players[0].questions">
+                  <span class="checkpointer">{{question.number}}. {{question.checkpointer}} ({{question.difficulty | difficulty}}):</span><br>
+                  <div>
+                    <span class="player-name-question">Player: </span>{{final.players[0].name}}<br>
+                    <span class="question">Pregunta:</span> {{question.question}}<br>
+                    <span ng-if="question.help"><span class="help">Ayuda:</span> {{question.help}}<br></span>
+                    <span class="answer">Respuesta:</span> {{question.answer}}<br>
+                    <span ng-if="question.correct"><span class="correct">Correcta:</span> {{question.correct}}<br></span>
+                    <span ng-if="question.points"><span class="checkpointer">Correcta!</span><br></span>
+                  </div>
+                  <div>
+                    <span class="player-name-question">Player: </span>{{final.players[1].name}}<br>
+                    <span class="question">Pregunta:</span> {{final.players[1].questions[$index].question}}<br>
+                    <span ng-if="final.players[1].questions[$index].help"><span class="help">Ayuda:</span> {{final.players[1].questions[$index].help}}<br></span>
+                    <span class="answer">Respuesta:</span> {{final.players[1].questions[$index].answer}}<br>
+                    <span ng-if="final.players[1].questions[$index].correct"><span class="correct">Correcta:</span> {{final.players[1].questions[$index].correct}}<br></span>
+                    <span ng-if="final.players[1].questions[$index].points"><span class="checkpointer">Correcta!</span><br></span>
+                  </div>
+                  <br ng-if="!$last">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+    <div class="col-sm-offset-1 col-md-offset-1 col-xs-offset-0 col-xs-12 col-sm-10 col-md-10 row" 
+          ng-show="topScoresCtrl.currentPage == month.month"
            ng-repeat="month in topScoresCtrl.results | orderBy:'-monthNumber'" >
       
-      <div ng-if="topScoresCtrl.currentMonth == month.monthNumber" class="score-table">
+      <div class="score-table">
 
         <h2>-&nbsp;&nbsp;HIGH SCORES {{month.month}}&nbsp;&nbsp;-</h2>
 

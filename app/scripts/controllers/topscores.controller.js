@@ -6,7 +6,8 @@ chkHighScoresApp.controller("TopScoresController", function ($scope, $state, $ro
 	topScoresCtrl.getTopScores = function(){
 		var topscores = TopScoresService.getTopScores().then(function(data) {
 			topScoresCtrl.results = data.results;
-			topScoresCtrl.currentMonth = data.results[0].monthNumber;
+			topScoresCtrl.finals = data.finals;
+			topScoresCtrl.currentPage = "final";
 		});
 		TopScoresService.getStats();
 	};
